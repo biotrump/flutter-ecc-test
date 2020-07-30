@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
+//import 'package:simple_permissions/simple_permissions.dart';
+
 import 'secp256k1.dart';
 
 void main() {
@@ -100,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.file(new File('/storage/emulated/0/Download/forest.jpg')),
+            Image.file(new File('/storage/emulated/0/DCIM/Camera/forest.jpg')),
             Text(
               'You have pushed the button this many times:',
             ),
