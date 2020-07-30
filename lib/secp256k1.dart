@@ -11,8 +11,15 @@ import "package:pointycastle/random/fortuna_random.dart";
 
 void secp256k1DH() {
   var keyPair = _secp256k1KeyPair();
+  //print(keyPair);
+  ECPublicKey publicKey = keyPair.publicKey;
+  //bigInt.sign == 1 as a postivie
+  //bigInt.sign == 0 as a negative
+  print(publicKey.Q.x.toBigInteger().toRadixString(16));
+  print(publicKey.Q.y.toBigInteger().toRadixString(16));
+
   ECPrivateKey privateKey = keyPair.privateKey;
-  print(privateKey.d);
+  print(privateKey.d.toRadixString(16));
 }
 
 AsymmetricKeyPair<PublicKey, PrivateKey> _secp256k1KeyPair() {
